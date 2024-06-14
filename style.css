@@ -30,6 +30,7 @@ button {
   background: rgb(235, 73, 180);
   color: white;
   padding: 5px;
+  margin-bottom: 20px;
 }
 
 button:hover {
@@ -46,6 +47,21 @@ button:active {
 button:disabled {
   cursor: default;
   filter: brightness(30%);
+}
+
+.dropdown-label {
+  font-size: x-large;
+  color: white;
+  background: rgb(235, 73, 180);
+  margin-bottom: 20px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+select {
+  padding: 10px;
+  font-size: x-large;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1000px) {
