@@ -22,9 +22,10 @@ const getJoke = async () => {
   const jokeUrl = `https://v2.jokeapi.dev/joke/Any?lang=${jokeLanguage}&blacklistFlags=racist`
   const response = await fetch(jokeUrl);
   const data  = await response.json();
+  console.log(data.setup)
   console.log(data.delivery)
-  if (!data.error && typeof data.delivery != 'undefined') {
-    src = data.delivery;
+  if (!data.error && typeof data.delivery != 'undefined' && typeof data.setup != 'undefined') {
+    src = data.setup + data.delivery;
   } else {
     if (language === 'german') {
       src = "Ich fand leider keinen Joke.";
