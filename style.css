@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(103, 184, 217);
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url('./robot.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: 3px 2px 20px 10px rgba(29, 49, 49, 0.6);
+  font-size: x-large;
+  font-weight: 600;
+  border: 2px solid rgb(29, 49, 49);
+  border-radius: 5px;
+  background: rgb(235, 73, 180);
+  color: white;
+  padding: 5px;
+}
+
+button:hover {
+  transition: all 0.25s;
+  transform: scale(0.98);
+  border-color: rgb(47, 79, 79);
+}
+
+button:active {
+  transition: all 0.25s;
+  transform: scale(0.95);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  button {
+    cursor: pointer;
+    box-shadow: 5px 5px 30px 20px rgba(29, 49, 49, 0.6);
+    font-size: x-large;
+    font-weight: 600;
+    border: 2px solid rgb(29, 49, 49);
+    border-radius: 5px;
+    background: rgb(235, 73, 180);
+    color: white;
+    padding: 5px;
+  }
+}
